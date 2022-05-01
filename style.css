@@ -1,1 +1,190 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
+body {
+    box-sizing: border-box;
+    margin: auto;
+    font-family: Roboto;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+}
+
+header {
+    align-self: center;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, .15);
+    background-color: rgb(252,252,252);
+    padding: 25px 0px 25px 100px;
+    z-index: 1;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 100px 5fr;
+    padding: 40px;
+    background-color: rgb(243,243,243);
+    z-index: 0;
+}
+
+#logo {
+    font-size: 40px; 
+    font-family: "Gentium Book Basic";
+    font-weight: 900;
+}
+
+#add-btn-container {
+    justify-self: center;
+}
+
+.add-btn {
+    font-family: Roboto;
+    appearance: none;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 15px 30px;
+    background-color: rgb(243,243,243);
+    border-radius: 10px;
+    border-color: rgb(243,243,243);
+    border: 0;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: rgb(222,222,222);
+    border-color: rgb(222,222,222);
+}
+
+.add-btn:focus {
+    outline: none
+}
+
+.add-btn > span {
+    font-size: 28px;
+}
+
+.form {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 10px;
+}
+
+.modal {
+    border-radius: 10px;
+    padding: 20px;
+    width: 320px;
+    border: 0;
+    background-color: rgb(243,243,243);
+}
+
+input[type="text"], input[type="tel"] {
+    display: block;
+    font-family: Roboto;
+    font-size: 18px;
+    padding: 15px 15px 15px 10px;
+    border: 0;
+    border-radius: 5px;
+}
+
+input[type="text"]:focus, input[type="tel"]:focus {
+    outline: none
+}
+
+.checkbox {
+    place-self: center;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+input[type="checkbox"] {
+    height: 18px;
+    width: 18px;
+    border: 0;
+    accent-color: white;
+    cursor: pointer;
+}
+
+legend {
+    place-self: center;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+input::placeholder {
+    font-size: 18px;
+}
+
+button[type="submit"] {
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: Poppins;
+    font-weight: 900;
+    background-color: rgb(138,255,47);
+    border: 0;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(106,243,0);
+
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px;
+    justify-items: center;
+}
+
+.card {
+    height: 270px;
+    width: 340px;
+    background-color: rgb(252,252,252);
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .2);
+    display: grid;
+    grid-template-rows: .5fr .5fr .5fr 1fr 1fr;
+    place-items: center;
+    padding: 10px;
+}
+
+.title, .author, .pages {
+    font-weight: 600;
+    font-size: 18px;
+    font-family: Poppins;
+}
+
+.card button {
+    width: 280px;
+    height: 50px;
+    font-size: 18px;
+    font-family: Poppins;
+    font-weight: 600;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.read {
+    background-color: rgb(106,243,0);
+}
+
+.read:hover {
+    background-color: rgb(98,224,0);
+
+}
+
+.unread {
+    background-color: rgb(219,112,120);
+}
+
+.unread:hover {
+    background-color: rgb(211,81,90);
+}
+
+.remove:hover {
+    background-color: rgb(232, 232, 232);
+}

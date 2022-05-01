@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div id="logo">Library</div>
+    </header>
+    <main class="main">
+        <div id="add-btn-container">
+            <button class="add-btn"><span>+</span> New book</button>
+        </div>
+        <dialog class="modal">
+            <form class="form" method="dialog" onsubmit="addBookToLibrary() & displayBook()">
+                <legend>New book</legend>
+                <input type="text" name="title" id="title" placeholder="title" required>
+                <input type="text" name="author" id="author" placeholder="author" required>
+                <input type="tel" name="pages" id="pages" placeholder="pages" maxlength="5" required>
+                <div class="checkbox">
+                    <label for="status">Have you read it?</label>
+                    <input type="checkbox" name="status" id="status">
+                </div>
+                <button type="submit">Add book</button>
+            </form>
+        </dialog>
+        <div class="cards-container">
+        </div>
+    </main>
+</body>
+
+</html>
